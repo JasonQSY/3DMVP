@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Multimodal Graph Benchmark.">
+  <meta name="keywords" content="multimodal,graph">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multimodal Graph Benchmark</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://robotic-view-transformer.github.io/">
+            RVT
+          </a>
+          <a class="navbar-item" href="https://robotic-view-transformer-2.github.io/">
+            RVT-2
+          </a>
+          <a class="navbar-item" href="https://robot-colosseum.github.io/">
+            COLOSSEUM
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">3D-MVP: 3D Multiview Pretraining for Robotic Manipulation</h1>
+          <!-- <h3 class="title is-4 publication-title">Open-Vocabulary 3D Visual Grounding with Large Language Model as an Agent</h3> -->
+          <!-- <h4 class="title is-size-4 publication-title" style="color: red;">ICRA 2024</h4> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jasonqsy.github.io/">Shengyi Qian</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://kaichun-mo.github.io/">Kaichun Mo</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~valts/">Valts Blukis</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cs.nyu.edu/~fouhey/">David Fouhey</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://imankgoyal.github.io/">Ankit Goyal</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>NVIDIA <sup>2</sup>University of Michigan <sup>3</sup>New York University</span>
+          </div>
+          <div class="is-size-7 publication-authors">
+            <span class="author-block">Work done during NVIDIA Research internship</span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2309.12311"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Demo Link. -->
+              <!-- <span class="link-block">
+                <a href="http://sled-whistler.eecs.umich.edu:7777/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Live Demo</span>
+                  </a> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/datasets/mm-graph-org/mm-graph"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      &#129303; 
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span> -->
+              <!-- Demo Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-play-circle"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/mm-graph-benchmark/mm-graph-benchmark"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent works have shown that visual pretraining on egocentric datasets using masked autoencoders (MAE) can improve generalization for downstream robotics tasks. However, these approaches pretrain only on 2D images, while many robotics applications require 3D scene understanding. In this work, we propose 3D-MVP, a novel approach for 3D multi-view pretraining using masked autoencoders. We leverage Robotic View Transformer (RVT), which uses a multi-view transformer to understand the 3D scene and predict gripper pose actions. We split RVT's multi-view transformer into visual encoder and action decoder, and pretrain its visual encoder using masked autoencoding on large-scale 3D datasets such as Objaverse. We evaluate 3D-MVP on a suite of virtual robot manipulation tasks and demonstrate improved performance over baselines. We also show promising results on a real robot platform with minimal finetuning. Our results suggest that 3D-aware pretraining is a promising approach to improve sample efficiency and generalization of vision-based robotic manipulation policies. We will release code and pretrained models for 3D-MVP to facilitate future research.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-centered is-four-fifths">
+          <h2 class="title is-3">Approach</h2>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <!-- <div></div> -->
+        <!-- Your image here -->
+        <img src="static/images/architecture.png" width="80%" alt="Generalist outputs" />
+        <!-- <div>Visualization of our Multimodal Graph Benchmark. All nodes of our benchmark have both visual and text features. \textbf{(a) Amazon-Sports:} The image and text come from the original image and title of the sports equipment. \textbf{(b) Goodreads-LP:} The image comes from the cover of the book. We do not show the text features of Goodreads-LP since the book description is very long. \textbf{(c) Ele-fashion:} The image and text come from the original image and title of the fashion product.</div> -->
+      </div>
+      <div class="column is-centered has-text-centered">
+        <div class="content is-centered has-text-justified">
+          <p>
+            Overview of 3D-MVP. (a) We first pretrain a Multiview 3D Transformer using masked autoencoder on multiview RGB-D images. (b) We then finetune the pretrained Multiview 3D Transformer on manipulation tasks. Since the MVT is pretrained, the learned manipulation policy generalizes better. For example, it is more robust to changes of texture, size and lighting.
+          </p>
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-centered is-four-fifths">
+          <h2 class="title is-3">Results on RLBench</h2>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <!-- <div></div> -->
+        <!-- Your image here -->
+        <img src="static/images/rlbench.png" width="80%" alt="Generalist outputs" />
+        <!-- <div>Visualization of our Multimodal Graph Benchmark. All nodes of our benchmark have both visual and text features. \textbf{(a) Amazon-Sports:} The image and text come from the original image and title of the sports equipment. \textbf{(b) Goodreads-LP:} The image comes from the cover of the book. We do not show the text features of Goodreads-LP since the book description is very long. \textbf{(c) Ele-fashion:} The image and text come from the original image and title of the fashion product.</div> -->
+      </div>
+      <div class="column is-centered has-text-centered">
+        <div class="content is-centered has-text-justified">
+          <p>
+            We report the task completion success rate for 18 RLBench tasks, as well as the average success rate. 3D-MVP reaches the state-of-the-art performance on the benchmark. The pretraining is mainly helpful for tasks with medium difficulty.
+          </p>
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-centered is-four-fifths">
+          <h2 class="title is-3">Results on COLOSSEUM</h2>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <!-- <div></div> -->
+        <!-- Your image here -->
+        <img src="static/images/colosseum.png" width="65%" alt="Generalist outputs" />
+        <!-- <div>Visualization of our Multimodal Graph Benchmark. All nodes of our benchmark have both visual and text features. \textbf{(a) Amazon-Sports:} The image and text come from the original image and title of the sports equipment. \textbf{(b) Goodreads-LP:} The image comes from the cover of the book. We do not show the text features of Goodreads-LP since the book description is very long. \textbf{(c) Ele-fashion:} The image and text come from the original image and title of the fashion product.</div> -->
+      </div>
+      <div class="column is-centered has-text-centered">
+        <div class="content is-centered has-text-justified">
+          <p>
+            We report the average task completion success rate for 12 environmental perturbations and no perturbation. Manipulation policies which do explicit 3D reasoning (RVT) works significantly better and 2D pretraining approaches (MVP and R3M). 3D-MVP is more robust than RVT on most perturbations. MO = manipulation object. RO = receiver object.
+          </p>
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+
+<!-- End paper abstract -->
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/yellow_yoga_mat.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">LLM-Grounder</span> enables users to interact with a NeRF model by typing in natural language.
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- 
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Video</h2>
+    <div class="publication-video">
+      <iframe src="https://www.youtube.com/embed/eO-Vaf-1R1s?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+    </div>
+    <h2 class="subtitle has-text-centered">
+      Video Demo with examples.
+    </h2>
+  </div>
+</div> -->
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        
+        <img width="100%" src="static/images/overview.png" alt="Overview">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present the first method capable of localizing novel objects in 3D scenes using
+            Neural Radiance Field (NeRF) and Large Language Models (LLMs) through iterative,
+            natural language-based interactions. While grounding dialog to 2D images in multimodal
+            dialog systems has been extensively studied, little work has been done in 3D object grounding.
+            Furthermore, the existing 3D object grounding approaches predominantly rely on rigid,
+            phrase-based manners, a stark contrast to how humans naturally refer to objects using short,
+            natural phrases and iteratively clarifying their references.
+          </p>
+          <p>
+            Addressing these gaps, our work introduces a novel framework, "Chat with NeRF," that
+            integrates interactive dialog systems with NeRF. This integration enables a more human-like
+            interaction with 3D objects in a learned 3D scene representation,
+            leading to a more intuitive and accurate object localization.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@misc{zhu2024multimodal,
+    title={Multimodal Graph Benchmark}, 
+    author={Jing Zhu and Yuhang Zhou and Shengyi Qian and Zhongmou He and David F. Fouhey and Tong Zhao and Neil Shah and Danai Koutra},
+    year={2024},
+}</code></pre>
+  </div>
+</section> -->
+
+<!-- <section class="section" id="Examples">
+  <div class="container is-max-desktop content">
+    <h2 class="title">More Examples</h2>
+    <video id="teaser" autoplay muted loop playsinline height="100%">
+      <source src="./static/videos/cutting_board_2.mp4"
+              type="video/mp4">
+    </video>
+    <center>"I want a cutting board"</center>
+    <br>
+    <video id="teaser" autoplay muted loop playsinline height="100%">
+      <source src="./static/videos/food.mp4"
+              type="video/mp4">
+    </video>
+    <center>"I'm hungry, can you find me something to eat?"</center>
+    <br>
+    <video id="teaser" autoplay muted loop playsinline height="100%">
+      <source src="./static/videos/computer.mp4"
+              type="video/mp4">
+    </video>
+    <center>"Computer"</center>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <!-- <a class="icon-link" href="https://github.com/sled-group/chat-with-nerf" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed
+            under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
